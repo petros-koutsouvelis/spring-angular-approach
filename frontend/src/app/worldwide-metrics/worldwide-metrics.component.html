@@ -1,0 +1,42 @@
+<h1>Worldwide-Metrics</h1>
+<div>
+    <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" (input)="search()">
+
+    <div>
+        <label for="regionFilter">Region:</label>
+        <select id="regionFilter" [(ngModel)]="selectedRegion" (change)="filter()">
+          <option value="">All Regions</option>
+          <option *ngFor="let row of data" [value]="row.regionName">{{ row.regionName }}</option>
+        </select>
+        
+        <label for="dateFrom">From:</label>
+        <input type="number" id="dateFrom" [(ngModel)]="yearFrom" (input)="filter()" [min]="1950">
+        
+        <label for="dateTo">To:</label>
+        <input type="number" id="dateTo" [(ngModel)]="yearTo" (input)="filter()">
+      </div>
+      
+    <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th>Continent Name</th>
+            <th>Region Name</th>
+            <th>Country Name</th>
+            <th>Year</th>
+            <th>Population</th>
+            <th>GDP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of filteredResults">
+            <td>{{ row.continentsName }}</td>
+            <td>{{ row.regionName }}</td>
+            <td>{{ row.countryName }}</td>
+            <td>{{ row.year }}</td>
+            <td>{{ row.population }}</td>
+            <td>{{ row.gdp }}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+  

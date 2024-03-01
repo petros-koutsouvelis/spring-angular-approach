@@ -1,0 +1,10 @@
+<h1>Countries-languages</h1>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let country of countries">
+      <a class="nav-link"  routerLinkActive="active" routerLink="/language" [queryParams]="{id:country.country_id, name:country.name}">
+        NAME:{{ country.name }}
+        AREA:{{ country.area }} 
+        CODE2:{{ country.country_code2 }}
+      </a>
+    </li>
+</ul>

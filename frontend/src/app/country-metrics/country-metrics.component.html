@@ -1,0 +1,23 @@
+<h1>Country-metrics</h1>
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">NAME</th>
+      <th scope="col">CODE3</th>
+      <th scope="col">YEAR</th>
+      <th scope="col">POPULATION</th>
+      <th scope="col">GDP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let country_stat of country_stats">
+      <td>{{ country_stat.country_id }}</td>
+      <td>{{ country_stat.name }} </td>
+      <td>{{ country_stat.country_code3 }}</td>
+      <td>{{ country_stat.year }}</td>
+      <td>{{ country_stat.population }}</td>
+      <td>{{ country_stat.gdp }}</td>
+    </tr>
+  </tbody>
+</table>

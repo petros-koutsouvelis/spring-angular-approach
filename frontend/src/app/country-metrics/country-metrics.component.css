@@ -1,0 +1,10 @@
+li{
+    color: white;
+}
+li:nth-child(even) {
+    background-color: #212529; /* Light gray background for even items */
+}
+
+li:nth-child(odd) {
+    background-color: #2C3034; /* White background for odd items */
+}
