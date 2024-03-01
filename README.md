@@ -18,10 +18,11 @@ Prerequisites:
    
 4. Install the dependencies with "npm install"
 5. While still inside the frontend projectfile start the frontend server with ng s
+6. The frontend is checking for a localhost in port 8080, make sure to create your database accordingly
 
-6. Inside the code of the backend file, there is an application.properties file.
+7. Inside the code of the backend file, there is an application.properties file.
    You will need to change the username and password to the ones corresponding to your localhost database otherwise the project will fail
-7.Once the changes have been applied you can launch the backend file which should have successfully established a connection with the frontend
+8.Once the changes have been applied you can launch the backend file which should have successfully established a connection with the frontend
 
 Goals of this project
   1. Create a connection between DB and Spring Application
